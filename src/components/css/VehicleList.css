@@ -1,0 +1,30 @@
+.vehicle-list-container {
+  max-height: 500px;
+  min-height: 200px;
+  overflow: auto;
+}
+
+.vehicle-list {
+  width: 100%;
+}
+
+.vehicle-list table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.vehicle-list th,
+.vehicle-list td {
+  padding: 8px;
+  text-align: left;
+}
+
+.vehicle-list thead th {
+  position: sticky;
+  top: 0;
+  background-color: #f1f1f1;
+}
+
+.vehicle-list button {
+  padding: 5px 10px;
+}
