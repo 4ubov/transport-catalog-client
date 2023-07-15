@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# React js client to implement <a href="https://github.com/4ubov/transport-catalog-api">Transport-Catalog REST-API</a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+## How to start:
 
 In the project directory, you can run:
 
+### `npm intall`
+
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Important Information: 
+### Запросы в коде отпраляются на адресс без указания сервера.
+### Пример: 
+    useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch('/api/category/');
+        if (response.ok) {
+          const data = await response.json();
+          setCategories(data);
+        } else {
+          console.log('Error:', response.status);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    
+### Запрос отправляется по адрессу /api/category/ , вместо обычного http://localhost:8080/api/category/
+
+</br>
+
+## UI screenshots 
+
+### Starter page: "http://localhost:3000/"
+![image](https://github.com/4ubov/transport-catalog-api/assets/46792640/10f66009-36e1-4970-814e-f0103d4f72ac)
+
+
+### Edit page
+![image](https://github.com/4ubov/transport-catalog-api/assets/46792640/ca791fa6-f349-41c8-9a0d-49df88829289)
+
+### Add new Vehicle page
+![image](https://github.com/4ubov/transport-catalog-api/assets/46792640/93a0fe87-3666-4ee1-abb2-d89cc8cfef32)
+
+### Drop-down menu view
+![image](https://github.com/4ubov/transport-catalog-api/assets/46792640/1d3eafec-ea01-4b4d-99c6-d94db79a0db8)
+
+### Display Exception 
+![image](https://github.com/4ubov/transport-catalog-client/assets/46792640/fcdc2c8c-6516-4e03-a5b6-bd77b6908138)
+
+
