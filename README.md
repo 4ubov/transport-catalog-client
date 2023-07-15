@@ -9,8 +9,6 @@ In the project directory, you can run:
 ### `npm start`
 
 
-### `npm run build` fails to minify
-
 
 ## Important Information: 
 ### Запросы в коде отпраляются на адресс без указания сервера.
